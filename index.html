@@ -1,171 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        header nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #333;
-            padding: 14px 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            height: 400px;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .mySlides {
-            display: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .mySlides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .fade {
-            animation: fade 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: 0.4;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: black;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .dot-container {
-            text-align: center;
-            padding: 10px;
-            background: #ddd;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aly's Food Webpage</title>
+    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" onclick="currentSlide(1)">Chicago</a>
-            <a href="#" onclick="currentSlide(2)">Los Angeles</a>
-            <a href="#" onclick="currentSlide(3)">New York</a>
+    <header class="topnav">
+        <div class="logo">
+            <img src="logo.png" alt="Aly's Logo" width="50" height="50" />
+        </div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#foodGallery">Food Gallery</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="Chicago.jpeg" alt="Background image 1">
-            </div>
-            <div class="mySlides fade">
-                <img src="Los Angeles.jpeg" alt="Background image 2">
-            </div>
-            <div class="mySlides fade">
-                <img src="New York.jpeg" alt="Background image 3">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
     </header>
+
+    <div class="hero-slider">
+        <a class="hero-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="hero-next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="mySlides fade"><img src="food (1).jpeg" alt="Soup"></div>
+        <div class="mySlides fade"><img src="food (2).jpeg" alt="Samosas"></div>
+        <div class="mySlides fade"><img src="food (3).jpeg" alt="Avocado Toast"></div>
+        <div class="mySlides fade"><img src="food (4).jpeg" alt="Fried Cassava"></div>
+        <div class="mySlides fade"><img src="food (5).jpeg" alt="Salad"></div>
+        <div class="mySlides fade"><img src="food (6).jpeg" alt="Quinoa & Chickpea Bowl"></div>
+        <div class="mySlides fade"><img src="food (7).jpeg" alt="Kachumbari"></div>
+        <div class="mySlides fade"><img src="food (8).jpeg" alt="Grilled Chicken in Coconut Sauce"></div>
+        <div class="mySlides fade"><img src="food (9).jpeg" alt="Mandazi"></div>
+        <div class="mySlides fade"><img src="food (10).jpeg" alt="Chocolate Banana Cake"></div>
+        <div class="mySlides fade"><img src="food (11).jpeg" alt="Fresh Passion Juice"></div>
+        <div class="mySlides fade"><img src="food (12).jpeg" alt="Masala Chai"></div>
+        <div class="mySlides fade"><img src="food (13).jpeg" alt="Classic Dawa Mocktail"></div>
+        <div class="mySlides fade"><img src="food (14).jpeg" alt="Hot Chocolate"></div>
+        <div class="mySlides fade"><img src="food (15).jpeg" alt="Pizza"></div>
+        <div class="mySlides fade"><img src="food (16).jpeg" alt="Burger"></div>
+        <div class="mySlides fade"><img src="food (17).jpeg" alt="Pancakes"></div>
+        <div class="mySlides fade"><img src="food (18).jpeg" alt="Spaghetti"></div>
+        <div class="mySlides fade"><img src="food (19).jpeg" alt="Sandwiches"></div>
+    </div>
+
+    <main class="container">
+        <section id="home">
+            <h1>Delicious food made with love.</h1>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                We believe food is more than just a meal; it’s a celebration of culture, community, and creativity.
+                Inspired by the rich flavors of East Africa and infused with global culinary flair, every dish is
+                handcrafted with fresh, locally-sourced ingredients and a whole lot of heart. Whether you're craving
+                comforting classics or daring new tastes, we serve experiences that warm the soul and spark connection.
+                Step into our cozy space, breathe in the aroma of slow-cooked spices, and let our friendly team treat
+                you like family. One bite, and you’ll know you’ve found your new favorite spot.
+            </p>
+        </section>
+
+        <section id="menu">
+            <h2>🍴 Our Signature Menu:</h2>
+            <h3>🍱 Starters</h3>
+            <ul>
+                <li>Butternut & Ginger Soup – creamy, with a warm East African spice twist.</li>
+                <li>Ndengu Samosas – crisp pastries filled with seasoned green grams.</li>
+                <li>Avocado Toast Bites – with Kachumbari topping & balsamic glaze.</li>
+                <li>Fried Mhogo Bites – cassava chips with chili-lime dip.</li>
+            </ul>
+            <h3>🥗 Salads</h3>
+            <ul>
+                <li>Tropical Fruit Salad – mango, pineapple, passionfruit & mint.</li>
+                <li>Quinoa & Chickpea Bowl – with roasted pumpkin & groundnut dressing.</li>
+                <li>Kachumbari – a zesty tomato-onion classic with lemon and coriander.</li>
+            </ul>
+            <h3>🍛 Mains</h3>
+            <ul>
+                <li>Grilled Chicken in Coconut Sauce – Kenyan-style, with aromatic herb rice.</li>
+                <li>Tilapia in Coconut Curry – Lake Victoria-inspired, served with soft chapati.</li>
+                <li>Nyama Choma – smoky grilled beef or goat with Ugali and Kachumbari.</li>
+                <li>Vegetarian Pilau – fragrant Swahili rice with spiced vegetables.</li>
+                <li>Cowpea Stew – hearty cowpea stew with matoke on the side.</li>
+            </ul>
+            <h3>🍰 Desserts</h3>
+            <ul>
+                <li>Mandazi – coconut beignets served warm with a dusting of sugar.</li>
+                <li>Mango Mousse – airy, chilled, tropical delight.</li>
+                <li>Chocolate Banana Cake – rich, with a swirl of Swahili halwa on top.</li>
+                <li>Sweet Ugali Cake – pan-seared and spiced with cardamom drizzle.</li>
+            </ul>
+            <h3>🍹 Drinks</h3>
+            <ul>
+                <li>Fresh Passion Juice – pulpy, lightly sweetened.</li>
+                <li>Tangawizi Iced Tea – spiced ginger chill with lemon.</li>
+                <li>Masala Chai – East African-style, creamy and soul-warming.</li>
+                <li>Classic Dawa Mocktail – honey, lime, and crushed ice with a herby finish.</li>
+                <li>Hot Chocolate – A blazing beverage, sweet and cosy. Tastes like home.</li>
+            </ul>
+        </section>
+
+        <section id="foodGallery">
+            <h2>Food Gallery</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade"><img src="food (1).jpeg" alt="Soup"></div>
+                <div class="mySlides fade"><img src="food (2).jpeg" alt="Samosas"></div>
+                <div class="mySlides fade"><img src="food (3).jpeg" alt="Avocado Toast"></div>
+                <div class="mySlides fade"><img src="food (4).jpeg" alt="Fried Cassava"></div>
+                <div class="mySlides fade"><img src="food (5).jpeg" alt="Salad"></div>
+                <div class="mySlides fade"><img src="food (6).jpeg" alt="Quinoa & Chickpea Bowl"></div>
+                <div class="mySlides fade"><img src="food (7).jpeg" alt="Kachumbari"></div>
+                <div class="mySlides fade"><img src="food (8).jpeg" alt="Grilled Chicken in Coconut Sauce"></div>
+                <div class="mySlides fade"><img src="food (9).jpeg" alt="Mandazi"></div>
+                <div class="mySlides fade"><img src="food (10).jpeg" alt="Chocolate Banana Cake"></div>
+                <div class="mySlides fade"><img src="food (11).jpeg" alt="Fresh Passion Juice"></div>
+                <div class="mySlides fade"><img src="food (12).jpeg" alt="Masala Chai"></div>
+                <div class="mySlides fade"><img src="food (13).jpeg" alt="Classic Dawa Mocktail"></div>
+                <div class="mySlides fade"><img src="food (14).jpeg" alt="Hot Chocolate"></div>
+                <div class="mySlides fade"><img src="food (15).jpeg" alt="Pizza"></div>
+                <div class="mySlides fade"><img src="food (16).jpeg" alt="Burger"></div>
+                <div class="mySlides fade"><img src="food (17).jpeg" alt="Pancakes"></div>
+                <div class="mySlides fade"><img src="food (18).jpeg" alt="Spaghetti"></div>
+                <div class="mySlides fade"><img src="food (19).jpeg" alt="Sandwiches"></div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <div>
+                    <label for="name">Name</label><br />
+                    <input id="name" type="text" placeholder="Your Name" required />
+                </div>
+                <div>
+                    <label for="email">Email</label><br />
+                    <input id="email" type="email" placeholder="Your Email" required />
+                </div>
+                <div>
+                    <label for="message">Message</label><br />
+                    <textarea id="message" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <input type="submit" value="Send Message" />
+            </form>
+            <p>For enquiries or feedback, call <strong>+254 712345678</strong> or visit our website.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Aly's Food Webpage. All rights reserved.</p>
+        <img src="logo.png" alt="Watermark Logo" class="watermark" />
+    </footer>
+
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = 0;
+        let slideTimer;
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-
-            for (i = 0; i < slides.length; i++) {
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            slideTimer = setTimeout(showSlides, 3000);
         }
+
+        function plusSlides(n) {
+            clearTimeout(slideTimer);
+            const slides = document.getElementsByClassName("mySlides");
+            slideIndex += n;
+            if (slideIndex > slides.length) slideIndex = 1;
+            if (slideIndex < 1) slideIndex = slides.length;
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            slideTimer = setTimeout(showSlides, 3000);
+        }
+        window.onload = showSlides;
     </script>
 </body>
 
